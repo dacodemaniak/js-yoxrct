@@ -4,15 +4,18 @@ h2 {
 }
 
 div#vertical-scroll-container {
-  position: absolute;
-  height: 10em;
+  position: relative;
+  height: 6em;
+  width: 2em;
   background: transparent;
-  overflow: hidden;
+  overflow: scroll;
+  border: solid 1px red;
 }
 
 div.inner-verticla-scroll-container {
-  position: relative;
+  position: sticky;
   height: 2em;
+  width: 2em;
   top: 50%;
   transform: translateY(-50%);
   border: solid 1px black;
