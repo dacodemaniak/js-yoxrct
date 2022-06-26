@@ -1,0 +1,29 @@
+h1,
+h2 {
+  font-family: Lato;
+}
+
+div#vertical-scroll-container {
+  position: absolute;
+  height: 10em;
+  background: transparent;
+  overflow: hidden;
+}
+
+div.inner-verticla-scroll-container {
+  position: relative;
+  height: 2em;
+  top: 50%;
+  transform: translateY(-50%);
+  border: solid 1px black;
+}
+div.scroll-item {
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+  width: 3em;
+  background-color: aliceblue;
+  border-bottom-width: 1px;
+  border-bottom-color: blue;
+  border-bottom-style: solid;
+}
