@@ -5,6 +5,13 @@ import './style.css';
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
+// Place random item into view
+const randomNumber = 3;
+
+const targetElementPos = document.querySelector('[data-value="3"').offsetTop;
+document.querySelector('#vertical-scroll-container').scrollTop =
+  targetElementPos;
+
 // Check if a div goes in inner vertical
 const observer = new IntersectionObserver(
   (entries) => {
