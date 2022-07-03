@@ -16,10 +16,16 @@ document.querySelector('#vertical-scroll-container').scrollTop =
 const observer = new IntersectionObserver(
   (entries) => {
     if (entries[0]['isIntersecting'] === true) {
-      if (entries[0]['intersectionRatio'] === 1)
+      if (entries[0]['intersectionRatio'] === 1) {
         document.querySelector('#message').textContent =
           'Target is fully visible in screen : ' +
           entries[0].target.getAttribute('data-value');
+        // Remove all styles
+        [...document.querySelectorAll('.scroll-item')].forEach((scrollItem) => {
+          scrollItem.classList.remove('active-item');
+        });
+        entries[0].target.classList.add('active-item');
+      }
     }
   },
   {
@@ -32,3 +38,6 @@ const numbers = document.querySelectorAll('.scroll-item');
 numbers.forEach((number) => {
   observer.observe(number);
 });
+
+document.querySelector('#message').textContent =
+  'Target is fully visible in screen : ' + randomNumber;

@@ -13,12 +13,16 @@ div#vertical-scroll-container {
   overflow-y: auto;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
-  border: solid 1px red;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
 }
 
+div.bound {
+  height: 10px;
+}
 div.scroll-item {
   display: flex;
-  height: 2em;
+  height: 1.99em;
   line-height: 2em;
   vertical-align: middle;
   width: 2em;
@@ -27,4 +31,8 @@ div.scroll-item {
   border-bottom-color: blue;
   border-bottom-style: solid;
   scroll-snap-align: initial;
+}
+
+.active-item {
+  font-weight: bold;
 }
