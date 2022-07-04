@@ -33,6 +33,28 @@ div.scroll-item {
   scroll-snap-align: initial;
 }
 
+div.scroll-item.scroll-active {
+  animation-name: smoothZoom;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+}
+
 .active-item {
   font-weight: bold;
+}
+
+@keyframes smoothZoom {
+  0% {
+    transform: scale(1.5);
+  }
+
+  50% {
+    transform: scale(12);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
